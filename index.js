@@ -29,7 +29,7 @@ app.post("/resolve-captcha", upload.single("file"), async (req, res) => {
       return res.status(500).json({ error: "Failed to decode captcha" });
    }
 
-   res.json({ captchaText });
+   res.json(captchaText);
 });
 
 app.listen(port, () => console.log(`Server is running on http://localhost:${port}`));
